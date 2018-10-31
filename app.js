@@ -45,14 +45,16 @@ function copyDir(srcDir, tarDir, cb) {
             fs.stat(srcPath, function(err, stats) {
                 if (stats.isDirectory()) {
                     console.log('mkdir', tarPath);
-                    fs.mkdir(tarPath, function(err) {
-                        if (err) {
-                            console.log(err);
-                            return;
-                        }
+                    if (srcPath.indexOf('node_modules') < 0 && srcPath.indexOf('.idea') < 0) {
+                        fs.mkdir(tarPath, function(err) {
+                            if (err) {
+                                console.log(err);
+                                return;
+                            }
 
-                        copyDir(srcPath, tarPath, checkEnd);
-                    });
+                            copyDir(srcPath, tarPath, checkEnd);
+                        });
+                    }
                 } else {
                     if (srcPath.indexOf('app.js') < 0) {
                         copyFile(srcPath, tarPath, checkEnd);
