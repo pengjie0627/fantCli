@@ -1,12 +1,12 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.8",
   "author": "fant-me",
   "name": "fant-me",
   "license": "ISC",
   "description": "fant cli",
   "main": "app.js",
   "bin": {
-    "fant-cli init": "./app.js"
+    "fant-cli": "./app.js"
   },
   "repository": {
     "type": "git",
