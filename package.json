@@ -1,11 +1,16 @@
 {
-  "name": "pengjie",
-  "version": "0.1.0",
-  "private": false,
-  "author": "pengjie",
+  "version": "1.0.0",
+  "author": "fant-me",
+  "name": "fant-me",
+  "license": "ISC",
+  "description": "fant cli",
   "main": "app.js",
   "bin": {
     "fant-cli": "./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pengjie0627/fantCli.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",

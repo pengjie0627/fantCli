@@ -54,7 +54,9 @@ function copyDir(srcDir, tarDir, cb) {
                         copyDir(srcPath, tarPath, checkEnd);
                     });
                 } else {
-                    copyFile(srcPath, tarPath, checkEnd);
+                    if (srcPath.indexOf('app.js') < 0) {
+                        copyFile(srcPath, tarPath, checkEnd);
+                    }
                 }
             });
         });
@@ -63,4 +65,6 @@ function copyDir(srcDir, tarDir, cb) {
         files.length === 0 && cb && cb();
     });
 }
-copyDir(path.join(__dirname, './'), '.')
+copyDir(path.join(__dirname, './'), '.', function () {
+    console.log('自动创建成功')
+})
