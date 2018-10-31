@@ -34,8 +34,10 @@ function copyFile(srcPath, tarPath, cb) {
         cb && cb(ex);
         closeCount++
         if (closeCount === fileCount - 1 - dirCount) {
-            rmdir('./node_modules', () => {})
-            console.log('项目初始化完成！！！')
+            rmdir('./node_modules', () => {
+                console.log('项目初始化完成！！！')
+                console.log('执行npm install 进行安装依赖！！！')
+            })
         }
     })
 
@@ -69,7 +71,7 @@ function copyDir(srcDir, tarDir, cb) {
             fs.stat(srcPath, function(err, stats) {
                 if (stats.isDirectory()) {
                     dirCount++
-                    console.log('创建目录', srcPath);
+                    console.log('创建目录和文件中,请稍后...');
                     fs.mkdir(tarPath, function(err) {
                         if (err) {
                             console.log(err);
