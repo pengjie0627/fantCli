@@ -19,5 +19,4 @@ module.exports = [
         name: 'license',
         message: 'license?',
     },
-
 ]
