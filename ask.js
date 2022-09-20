@@ -11,6 +11,11 @@ module.exports = [
     },
     {
         type: 'input',
+        name: 'name',
+        message: 'project name?',
+    },
+    {
+        type: 'input',
         name: 'description',
         message: 'description?',
     },

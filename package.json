@@ -1,7 +1,7 @@
 {
   "version": "1.0.0.",
   "author": "<%=author%>",
-  "name": "fant-me",
+  "name": "<%=name%>",
   "license": "<%=license%>",
   "description": "<%=description%>",
   "main": "app.js",
