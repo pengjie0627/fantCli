@@ -1,9 +1,9 @@
 {
   "version": "1.1.5",
-  "author": "fant-me",
+  "author": "<%=author%>",
   "name": "fant-me",
-  "license": "ISC",
-  "description": "fant cli",
+  "license": "<%=license%>",
+  "description": "<%=description%>",
   "main": "app.js",
   "bin": {
     "fant-cli": "./app.js"
